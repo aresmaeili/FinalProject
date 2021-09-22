@@ -15,7 +15,6 @@
 		0C5A2A6F26F9E37A00CD932B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5A2A6D26F9E37A00CD932B /* LaunchScreen.storyboard */; };
 		0C5A2A7826F9E75B00CD932B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A2A7626F9E75B00CD932B /* TableViewCell.swift */; };
 		0C5A2A7926F9E75B00CD932B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5A2A7726F9E75B00CD932B /* TableViewCell.xib */; };
-		0C5A2A7C26F9F5E100CD932B /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A2A7B26F9F5E100CD932B /* NetworkApi.swift */; };
 		0C5A2A7F26F9FEB300CD932B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0C5A2A7E26F9FEB300CD932B /* Alamofire */; };
 		0C5A2A8226F9FED900CD932B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0C5A2A8126F9FED900CD932B /* Kingfisher */; };
 		0C5A2A8426FA031800CD932B /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A2A8326FA031800CD932B /* BookModel.swift */; };
@@ -32,7 +31,6 @@
 		0C5A2A7026F9E37A00CD932B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C5A2A7626F9E75B00CD932B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0C5A2A7726F9E75B00CD932B /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		0C5A2A7B26F9F5E100CD932B /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
 		0C5A2A8326FA031800CD932B /* BookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +72,6 @@
 				0C5A2A8326FA031800CD932B /* BookModel.swift */,
 				0C5A2A6626F9E37800CD932B /* ViewController.swift */,
 				0C5A2A6826F9E37800CD932B /* Main.storyboard */,
-				0C5A2A7B26F9F5E100CD932B /* NetworkApi.swift */,
 				0C5A2A6B26F9E37A00CD932B /* Assets.xcassets */,
 				0C5A2A6D26F9E37A00CD932B /* LaunchScreen.storyboard */,
 				0C5A2A7026F9E37A00CD932B /* Info.plist */,
@@ -171,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5A2A8426FA031800CD932B /* BookModel.swift in Sources */,
-				0C5A2A7C26F9F5E100CD932B /* NetworkApi.swift in Sources */,
 				0C5A2A6726F9E37800CD932B /* ViewController.swift in Sources */,
 				0C5A2A7826F9E75B00CD932B /* TableViewCell.swift in Sources */,
 				0C5A2A6326F9E37800CD932B /* AppDelegate.swift in Sources */,

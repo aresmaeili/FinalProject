@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 //for author
 //https://www.googleapis.com/books/v1/volumes?q=\()+inauthor
@@ -13,11 +14,10 @@ import UIKit
 //for title
 //https://www.googleapis.com/books/v1/volumes?q=\()+intitle
 
-
 struct BookModel : Codable {
-    var items : [Items]
+    var items : [Item]
 }
-struct Items : Codable {
+struct Item : Codable {
     var id : String?
     var volumeInfo : VolumeInfo
     var accessInfo : AccessInfo
@@ -42,16 +42,23 @@ struct Epub : Codable {
 }
 
 
-
-let link = "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor"
-let request = AF.request(link)
-request.responseJSON { data in
-    guard let unwrappedData = data.data else {return}
-    if let dataa = try? JSONDecoder().decode([Repos].self, from: unwrappedData ){
-        self.repos = dataa
+class RequestsManager{
+    
+    func requestBooks(completion: @escaping ([Item]) -> Void){
+        
+        let link = "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor"
+        let request = AF.request(link)
+        request.responseJSON { data in
+            guard let unwrappedData = data.data else {
+                completion([])
+                return
+            }
+            if let data = try? JSONDecoder().decode(BookModel.self, from: unwrappedData ){
+                completion(data.items)
+                return
+            }
+            completion([])
+        }
     }
-//            print(dataa)
-    print(self.repos.count)
-    self.tableView.reloadData()
 }
 
