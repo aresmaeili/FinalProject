@@ -17,12 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzf-TD-iIC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="127"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Book Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wae-8l-DvU">
-                                        <rect key="frame" x="72" y="30" width="270" height="34"/>
+                                        <rect key="frame" x="50" y="30" width="256" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="searchTextFieldAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="afY-b3-XF7"/>
+                                        </connections>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ejt-9z-xlZ">
                                         <rect key="frame" x="116.5" y="71" width="181" height="32"/>
@@ -35,7 +38,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANx-cC-yEs">
-                                        <rect key="frame" x="350" y="22" width="50" height="50"/>
+                                        <rect key="frame" x="314" y="22" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="EHT-Pm-8SW"/>
                                             <constraint firstAttribute="height" constant="50" id="b4m-iX-TX8"/>
@@ -49,17 +52,17 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstItem="Ejt-9z-xlZ" firstAttribute="top" secondItem="wae-8l-DvU" secondAttribute="bottom" constant="7" id="1ES-CU-Vbc"/>
-                                    <constraint firstItem="wae-8l-DvU" firstAttribute="width" secondItem="mzf-TD-iIC" secondAttribute="width" multiplier="0.652174" id="AX1-2i-1D8"/>
+                                    <constraint firstItem="wae-8l-DvU" firstAttribute="leading" secondItem="mzf-TD-iIC" secondAttribute="leading" constant="50" id="5yg-X4-NeD"/>
                                     <constraint firstItem="ANx-cC-yEs" firstAttribute="leading" secondItem="wae-8l-DvU" secondAttribute="trailing" constant="8" symbolic="YES" id="DHp-3E-wQx"/>
                                     <constraint firstItem="wae-8l-DvU" firstAttribute="top" secondItem="mzf-TD-iIC" secondAttribute="top" constant="30" id="J7j-Hx-OoY"/>
                                     <constraint firstItem="ANx-cC-yEs" firstAttribute="centerY" secondItem="wae-8l-DvU" secondAttribute="centerY" id="WnA-bE-b5y"/>
-                                    <constraint firstItem="Ejt-9z-xlZ" firstAttribute="centerX" secondItem="wae-8l-DvU" secondAttribute="centerX" id="dl9-bm-QfV"/>
-                                    <constraint firstItem="wae-8l-DvU" firstAttribute="centerX" secondItem="mzf-TD-iIC" secondAttribute="centerX" id="q8c-lM-euT"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ejt-9z-xlZ" secondAttribute="bottom" constant="48" id="sed-Bd-Qje"/>
+                                    <constraint firstItem="Ejt-9z-xlZ" firstAttribute="centerX" secondItem="mzf-TD-iIC" secondAttribute="centerX" id="dgW-gd-Jql"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ejt-9z-xlZ" secondAttribute="bottom" constant="25" id="sed-Bd-Qje"/>
+                                    <constraint firstAttribute="trailing" secondItem="ANx-cC-yEs" secondAttribute="trailing" constant="50" id="zWO-I9-NKk"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-Ez-ryl">
-                                <rect key="frame" x="0.0" y="195" width="414" height="618"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-Ez-ryl">
+                                <rect key="frame" x="0.0" y="172" width="414" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -92,6 +95,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8Il-1y-oUF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5dY-UH-OMA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

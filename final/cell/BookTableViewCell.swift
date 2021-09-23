@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
-class TableViewCell: UITableViewCell {
-    @IBOutlet weak var bookImage: UIImageView!
+class BookTableViewCell: UITableViewCell {
+    @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var titleDataLabel: UILabel!
     @IBOutlet weak var pageCountDataLabel: UILabel!
     @IBOutlet weak var ratingCountDataLabel: UILabel!
@@ -20,6 +21,7 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
@@ -29,4 +31,17 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func load( urlString : String ){
+        if let url = URL(string: urlString) {
+            bookImageView?.kf.setImage(with: url, options: .none) { result in
+                switch result{
+                case .success(_):
+                    print("Image ok!")
+                case .failure(let error):
+                    print("error => \(error)")
+                }
+            }
+
+        }
+    }
 }
