@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         booksTableView.delegate = self
         booksTableView.dataSource = self
         searchTextField.delegate = self
-        booksTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        booksTableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "‌BookTableViewCell")
     }
 }
 
@@ -68,7 +68,7 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! BookTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "‌BookTableViewCell") as! BookTableViewCell
         if let bookTitle = books[indexPath.row].volumeInfo.title {
             cell.titleStackView.isHidden = false
             cell.titleDataLabel.text = bookTitle
